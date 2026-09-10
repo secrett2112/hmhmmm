@@ -53,12 +53,12 @@ function initMuseum() {
     ========================= */
 
     const photos = [
-        "img/museum1.png",
-        "img/museum2.png",
-        "img/museum3.png",
-        "img/museum4.png",
-        "img/museum5.png",
-        "img/museum6.png"
+        // "museum1.png",
+        // "museum2.png",
+        // "museum3.png",
+        // "museum4.png",
+        // "museum5.png",
+        // "museum6.png"
     ];
 
     let currentIndex = 0;
@@ -330,7 +330,7 @@ function openGift(number){
         preload="metadata">
 
         <source
-            src="img/ily.mp3"
+            src="ily.mp3"
             type="audio/mpeg">
 
     </audio>
@@ -369,7 +369,7 @@ function openGift(number){
                     <div class="museum-frame museum-left">
 
                         <img
-                            src="img/museum6.png"
+                            src="museum6.png"
                             alt="">
 
                     </div>
@@ -378,7 +378,7 @@ function openGift(number){
                     <div class="museum-frame museum-main">
 
                         <img
-                            src="img/museum1.png"
+                            src="museum1.png"
                             alt="">
 
                     </div>
@@ -387,7 +387,7 @@ function openGift(number){
                     <div class="museum-frame museum-right">
 
                         <img
-                            src="img/museum2.png"
+                            src="museum2.png"
                             alt="">
 
                     </div>
@@ -440,7 +440,7 @@ break;
             <div class="music-player">
 
                 <img 
-                    src="img/ttkndr.jpeg" 
+                    src="ttkndr.jpeg" 
                     alt="Titik Nadir"
                     class="music-cover"
                 >
@@ -451,7 +451,7 @@ break;
                 </div>
 
                 <audio id="musicAudio">
-                    <source src="img/titik nadir.mp3" type="audio/mpeg">
+                    <source src="titik nadir.mp3" type="audio/mpeg">
                 </audio>
 
                 <button id="musicPlayBtn" class="music-play-btn">
@@ -477,7 +477,7 @@ break;
                 <div class="birthday-card-bark"></div>
 
                 <img
-                    src="img/spider.jpeg"
+                    src="spider.jpeg"
                     alt="Birthday Card"
                 >
 
