@@ -428,7 +428,7 @@ function openGift(number){
 
 break;
 
-       case 2:
+        case 2:
     giftContent.innerHTML = `
 
         <div class="music-section">
@@ -440,7 +440,7 @@ break;
             <div class="music-player">
 
                 <img 
-                    src="ttkndr.jpeg" 
+                    src="img/ttkndr.jpeg" 
                     alt="Titik Nadir"
                     class="music-cover"
                 >
@@ -451,9 +451,27 @@ break;
                 </div>
 
                 <audio id="musicAudio">
-                    <source src="titik nadir.mp3" type="audio/mpeg">
+                    <source src="img/titik nadir.mp3" type="audio/mpeg">
                 </audio>
 
+                <!-- PROGRESS BAR -->
+                <div class="music-progress">
+
+                    <span id="musicCurrentTime">0:00</span>
+
+                    <input 
+                        type="range" 
+                        id="musicProgress"
+                        min="0"
+                        value="0"
+                        step="0.1"
+                    >
+
+                    <span id="musicDuration">0:00</span>
+
+                </div>
+
+                <!-- PLAY / PAUSE -->
                 <button id="musicPlayBtn" class="music-play-btn">
                     ▶
                 </button>
@@ -627,28 +645,102 @@ function initMusicPlayer(){
     const musicAudio = document.getElementById("musicAudio");
     const musicPlayBtn = document.getElementById("musicPlayBtn");
 
+    const musicProgress = document.getElementById("musicProgress");
+    const musicCurrentTime = document.getElementById("musicCurrentTime");
+    const musicDuration = document.getElementById("musicDuration");
+
+
+    // =========================
+    // PLAY / PAUSE
+    // =========================
+
     musicPlayBtn.addEventListener("click", () => {
 
         if(musicAudio.paused){
 
             musicAudio.play();
-
             musicPlayBtn.textContent = "❚❚";
 
         } else {
 
             musicAudio.pause();
-
             musicPlayBtn.textContent = "▶";
 
         }
 
     });
 
+
+    // =========================
+    // LOAD DURASI LAGU
+    // =========================
+
+    musicAudio.addEventListener("loadedmetadata", () => {
+
+        musicProgress.max = musicAudio.duration;
+
+        musicDuration.textContent =
+            formatMusicTime(musicAudio.duration);
+
+    });
+
+
+    // =========================
+    // UPDATE PROGRESS BAR
+    // =========================
+
+    musicAudio.addEventListener("timeupdate", () => {
+
+        musicProgress.value = musicAudio.currentTime;
+
+        musicCurrentTime.textContent =
+            formatMusicTime(musicAudio.currentTime);
+
+    });
+
+
+    // =========================
+    // SEEK / SKIP LAGU
+    // =========================
+
+    musicProgress.addEventListener("input", () => {
+
+        musicAudio.currentTime = musicProgress.value;
+
+    });
+
+
+    // =========================
+    // LAGU SELESAI
+    // =========================
+
     musicAudio.addEventListener("ended", () => {
 
         musicPlayBtn.textContent = "▶";
 
+        musicProgress.value = 0;
+
     });
+
+
+    // =========================
+    // FORMAT WAKTU
+    // =========================
+
+    function formatMusicTime(seconds){
+
+        if(!isFinite(seconds)){
+            return "0:00";
+        }
+
+        const minutes = Math.floor(seconds / 60);
+
+        const secs = Math.floor(seconds % 60)
+            .toString()
+            .padStart(2, "0");
+
+        return `${minutes}:${secs}`;
+
+    }
 
 }
