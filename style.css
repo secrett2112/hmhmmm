@@ -1344,3 +1344,22 @@ button:active{
 
     margin-top: 15px !important;
 }
+
+.music-progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.music-progress span {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+#musicProgress {
+    flex: 1;
+     width: 100%;
+    cursor: pointer;
+}
