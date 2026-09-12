@@ -440,18 +440,18 @@ break;
             <div class="music-player">
 
                 <img 
-                    src="img/ttkndr.jpeg" 
+                    src="about you.png" 
                     alt="Titik Nadir"
                     class="music-cover"
                 >
 
                 <div class="music-info">
-                    <h2>Titik Nadir</h2>
-                    <p>Kahitna, Monita Tahalea</p>
+                    <h2>About You</h2>
+                    <p>The 1975</p>
                 </div>
 
                 <audio id="musicAudio">
-                    <source src="img/titik nadir.mp3" type="audio/mpeg">
+                    <source src="about you.mp3" type="audio/mpeg">
                 </audio>
 
                 <!-- PROGRESS BAR -->
