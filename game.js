@@ -504,28 +504,33 @@ break;
 
             <div class="birthday-card-details">
 
-                <h4 class="birthday-color1">
+                <h5 class="birthday-color1">
                     just a letter
                 </h4>
 
                 <h4 class="birthday-color2">
                     for You
-                </h4>
+                </h5>
 
 
-                <p>Pada akhirnya Ini hanyalah sebuah kisah yang amat panjang</p>
+                <p> “We are dreaming of tomorrow and tomorrow isn’t coming
+We are dreaming of a glory that we don’t really want
+We are dreaming of a new day when the new day’s here already
+We are running from the battle when it’s one that must be fought.
 
-                <p>Tentang cinta yang menyadarkan kita bahwa, Manusia adalah budak bagi yang dicintainya</p>
+And still we sleep.
 
-                <p>Hiduplah bertahun-tahun. lupakan tentang diriku Hiduplah dengan bebas</p>
+We are listening for the calling but never really heeding
+Hoping for the future when the future’s only plans
+Dreaming of the wisdom that we are dodging daily
+Praying for a saviour when salvation’s in our hands.
 
-                <p></p>
+And still we sleep.
 
-                <p></p>
-
-                <p>Kepadamu, 2000 tahun mulai sekarang</p>
-
-                <p>Darimu, 2000 tahun yang lalu</p>
+And still we dream,
+And still we fear,
+And still we pray,
+And still we sleep.”</p>
 
                 <p class="birthday-text-right">
                     -.......
